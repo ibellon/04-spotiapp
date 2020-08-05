@@ -15,10 +15,10 @@ export class SpotifyService {
 
     const url = 'https://api.spotify.com/v1/' + query;
 
-    console.log("URL: " + url);
+    console.log('URL: ' + url);
 
     const headers = new HttpHeaders({
-      Authorization: 'Bearer BQB4e-OHZXHkngS2qSSDR6zQVptxomsu-y6K67-fLa8zY8S8xP3IpqHM32VLrxS-gIPV-Y8GFMUIJHphJao'
+      Authorization: 'Bearer BQClWgLjItX0wRP-FUIkqkCofLFRKDG7DxBzUuH-EzJ-l1_LKzHSDW5rrk7mUuRMVvHpvbeQ-J0yGIjVnFw'
     });
 
     return this.http.get(url, { headers });
