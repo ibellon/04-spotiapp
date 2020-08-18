@@ -10,7 +10,11 @@ import { SpotifyService } from 'src/app/services/spotify.service';
 })
 export class ArtistComponent implements OnInit {
 
-  artista: any = {};
+  artista: any;
+  imageArtista: any;
+  nameArtista: string;
+  urlArtista: string;
+  loadingArtista: boolean;
 
   constructor(private activatedRoute: ActivatedRoute, private spotifyService: SpotifyService) { 
     this.activatedRoute.params.subscribe(data => {
@@ -22,10 +26,14 @@ export class ArtistComponent implements OnInit {
   }
   
   getArtista(id: string) {
-    this.spotifyService.getArtista(id).subscribe(artista => {
-     console.log(artista);
-    this.artista = artista;
-     });
-
+    this.loadingArtista = true;
+    this.spotifyService.getArtista(id)
+      .subscribe(artista => {
+        this.loadingArtista = false;
+        this.imageArtista = artista['images'];
+        this.nameArtista = artista['name'];
+        this.urlArtista = artista['external_urls'].spotify;
+        console.log(artista)
+      });
   }
 }
