@@ -17,4 +17,24 @@
             Regresar
         </button>
     </div>
+    <div class="row m-5">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <th>Foto</th>
+                    <th>Album</th>
+                    <th>Canción</th>
+                    <th>Vista Previa</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let track of topTracksArtista">
+                        <td></td>
+                        <td>{{track.album.name}}</td>
+                        <td>{{track.name}}</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
