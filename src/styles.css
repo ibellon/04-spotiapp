@@ -65,3 +65,15 @@ hr {
 .fadeIn {
     animation-name: fadeIn;
 }
+
+td {
+    border-color: white;
+    background-color: black;
+    color: white !important;
+}
+
+th {
+    border-color: white;
+    background-color: black;
+    color: white !important;
+}
