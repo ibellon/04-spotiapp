@@ -11,10 +11,14 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ArtistComponent } from './components/artist/artist.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
-import { ROUTES } from './components/app.routes';
-import { NoimagePipe } from './pipes/noimage.pipe';
 import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
 import { LoadingComponent } from './components/shared/loading/loading.component';
+
+import { ROUTES } from './components/app.routes';
+
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { DomSeguroPipe } from './pipes/dom-seguro.pipe';
+
 
 
 @NgModule({
@@ -25,6 +29,7 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     ArtistComponent,
     NavbarComponent,
     NoimagePipe,
+    DomSeguroPipe,
     TarjetasComponent,
     LoadingComponent
   ],
